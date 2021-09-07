@@ -31,8 +31,8 @@ public class ProductDAO {
         }
 
         public void save(Product product) {
-            jdbcTemplate2.update("INSERT INTO tablewebrest(product, s1price, s1rest , s2price,s2rest,s3price,s3rest,barcode) VALUES(?, ?, ?,?,?,?,?)",product.getProduct(), product.getS1price(),
-                    product.getS1rest(),product.getS2price(),product.getS2rest(),product.getS3price(),product.getS3rest());
+            jdbcTemplate2.update("INSERT INTO tablewebrest(product, s1price, s1rest , s2price,s2rest,s3price,s3rest,barcode) VALUES(?, ?, ?,?,?,?,?,?)",product.getProduct(), product.getS1price(),
+                    product.getS1rest(),product.getS2price(),product.getS2rest(),product.getS3price(),product.getS3rest(),barcode.getBarcode());
         }
 
         public void update(Product updatedProduct) {
