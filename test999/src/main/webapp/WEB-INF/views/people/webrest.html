@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Rest</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/product}" th:object="${product}">
+    <label for="product">Enter name: </label>
+    <input type="text" th:field="*{product}" id="product"/>
+    <div style="color:red" th:if="${#fields.hasErrors('product')}" th:errors="*{product}">Product Error</div>
+    <br/>
+
+    <label for="s1price">Enter s1price: </label>
+    <input type="text" th:field="*{s1price}" id="s1price"/>
+    <div style="color:red" th:if="${#fields.hasErrors('s1price')}" th:errors="*{s1price}">S1Price Error</div>
+    <br/>
+
+    <label for="s1rest">Enter s1rest: </label>
+    <input type="text" th:field="*{s1rest}" id="s1rest"/>
+    <div style="color:red" th:if="${#fields.hasErrors('s1rest')}" th:errors="*{s1rest}">S1Rest Error</div>
+    <br/>
+
+    <label for="s2price">Enter s2price: </label>
+    <input type="text" th:field="*{s2price}" id="s2price"/>
+    <div style="color:red" th:if="${#fields.hasErrors('s2price')}" th:errors="*{s2price}">S2Price Error</div>
+    <br/>
+
+    <label for="s2rest">Enter s2rest: </label>
+    <input type="text" th:field="*{s2rest}" id="s2rest"/>
+    <div style="color:red" th:if="${#fields.hasErrors('s2rest')}" th:errors="*{s2rest}">S2Rest Error</div>
+    <br/>
+
+    <label for="s3price">Enter s3price: </label>
+    <input type="text" th:field="*{s3price}" id="s3price"/>
+    <div style="color:red" th:if="${#fields.hasErrors('s3price')}" th:errors="*{s3price}">S3Price Error</div>
+    <br/>
+
+    <label for="s3rest">Enter s3rest: </label>
+    <input type="text" th:field="*{s3rest}" id="s3rest"/>
+    <div style="color:red" th:if="${#fields.hasErrors('s3rest')}" th:errors="*{s3rest}">S3Rest Error</div>
+    <br/>
+
+    <label for="barcode">Enter barcode: </label>
+    <input type="text" th:field="*{barcode}" id="barcode"/>
+    <div style="color:red" th:if="${#fields.hasErrors('barcode')}" th:errors="*{barcode}">Barcode Error</div>
+    <br/>
+
+    <input type="submit" value="Create!"/>
+</form>
+
+</body>
+</html>
